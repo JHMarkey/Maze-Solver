@@ -14,10 +14,10 @@ struct move{
   int moveType;
 };
 
-#define NUM_LINE_SENSORS 3
-#define MAX_MOVES 250
-#define MAX_HOUSE 2
-#define LINE_THRESHOLD 250
+#define NUM_LINE_SENSORS 3                                    
+#define MAX_MOVES 250  // Changing this value assigns more memory to storing moves, this will affect how long the robot can search the maze before returning to the start.
+#define MAX_HOUSE 2  // Changing this value will change how many objects will be found before the robot stops. 
+#define LINE_THRESHOLD 250  // Changing this value will affect the sensitivity of the line detection and will need to be tailored for each Robot.
 move moves[MAX_MOVES];
 int movesCount = 0;
 int hFound = 0;
@@ -29,9 +29,9 @@ int currentMove = 0;
 
 void calibrateSensors() {
   for (uint16_t i = 0; i < 120; i++) {
-    motors.setSpeeds(-200, 200);
+    motors.setSpeeds(-200, 200);  //Change these values to affect the turn rate during calibration.
     if (i > 30 && i <= 90) {
-      motors.setSpeeds(200, -200);
+      motors.setSpeeds(200, -200);  //Change these values to affect the turn rate during calibration.
     }
     lineSensors.calibrate();
   }
@@ -76,32 +76,32 @@ void printReadingsToSerial(int s1, int s2, int s3) {
 }
 
 void turnAround() {
-  for (int i = 0; i < 120; i++) {
-    motors.setSpeeds(-100, 100);
+  for (int i = 0; i < 120; i++) {    // Change these values to affect how long the robot turns.
+    motors.setSpeeds(-100, 100);    // Change these values to affect how fast the robot turns.
   }
 }
 
 void turnLeft() {
-  for (int i = 0; i < 60; i++) {
-    motors.setSpeeds(-100, 100);
+  for (int i = 0; i < 60; i++) {    // Change these values to affect how long the robot turns.
+    motors.setSpeeds(-100, 100);    // Change these values to affect how fast the robot turns.    
   }
 }
 
 void turnRight() {
-  for (int i = 0; i < 60; i++) {
-    motors.setSpeeds(100, -100);
+  for (int i = 0; i < 60; i++) {    // Change these values to affect how long the robot turns.
+    motors.setSpeeds(100, -100);    // Change these values to affect how fast the robot turns.
   }
 }
 
 void reverse() {
-  for (int i = 0; i < 60; i++) {
-    motors.setSpeeds(-100, -100);
+  for (int i = 0; i < 60; i++) {    // Change these values to affect how long the robot turns.
+    motors.setSpeeds(-100, -100);    // Change these values to affect how fast the robot turns.
   }
 }
 
 void forward() {
-  for (int i = 0; i < 60; i++) {
-    motors.setSpeeds(100, 100);
+  for (int i = 0; i < 60; i++) {    // Change these values to affect how long the robot turns.
+    motors.setSpeeds(100, 100);    // Change these values to affect how fast the robot turns.
   }
 }
 
