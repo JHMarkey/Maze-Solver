@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains code for a maze-solving robot implemented using a Zumo 32U4 robot platform. The code is designed to enable the robot to search a maze until it finds a houses or reaches the maximum move count, upon reaching either of these thresholds the robot will return to its start point and begin searching again. The robot will repeat this robot until 2 Houses have been found and it has returned to the start for the final time.
+This repository contains code for a maze-solving robot implemented using a Zumo 32U4 robot platform. The code is designed to enable the robot to search a maze until it finds a houses or reaches the maximum move count, upon reaching either of these thresholds the robot will return to its start point and begin searching again. The robot will repeat this robot until a defined number of Houses have been found and it has returned to the start for the final time.
 
 ## References
 
