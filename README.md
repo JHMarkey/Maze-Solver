@@ -33,7 +33,7 @@ This repository contains code for a maze-solving robot implemented using a Zumo 
 3. Once the calibration is completed the robot will imediately start searching the maze.
 4. The robot emits sounds using the buzzer when a house is found or when it reaches the maximum move count.
 5. The robot will then backtrack and emit sounds accordingly.
-6. The robot will repeatedly search the maze until it has found the maximum number of house that are defined by `MAX_HOUSES`.
+6.The robot will search the maze until it finds the maximum number of houses defined by `MAX_HOUSE`.
 7. After completing the task, the robot will stop moving.
 
 ### Functionality Overview
@@ -51,6 +51,6 @@ This repository contains code for a maze-solving robot implemented using a Zumo 
 - Adjust movement parameters (`turnAround()`, `turnLeft()`, etc.) as needed based on your robot's physical characteristics.
 - If the black line detection sensitivity needs changing locate `LINE_THRESHOLD` and change this value acordingly.
 - If the max number of moves is too few this value can be adjusted with `MAX_MOVES`.
-- To change the number houses to search for before stopping change the `MAX_HOUSES` value.
+- To change the number houses to search for before stopping change the `MAX_HOUSE` value.
 
 Feel free to reach out for any further assistance or clarification at c1009859@hallam.shu.ac.uk.
