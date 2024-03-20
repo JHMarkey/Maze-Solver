@@ -51,6 +51,7 @@ This repository contains code for a maze-solving robot implemented using a Zumo 
 - Adjust movement parameters (`turnAround()`, `turnLeft()`, etc.) as needed based on your robot's physical characteristics.
 - If the black line detection sensitivity needs changing locate `LINE_THRESHOLD` and change this value acordingly.
 - If the max number of moves is too few this value can be adjusted with `MAX_MOVES`.
+- If `MAX_MOVES` is set too high the robot will **NOT** run as it will assign too much memory to storing these moves.
 - To change the number houses to search for before stopping change the `MAX_HOUSE` value.
 
 Feel free to reach out for any further assistance or clarification at c1009859@hallam.shu.ac.uk.
